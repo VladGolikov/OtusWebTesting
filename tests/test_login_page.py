@@ -22,5 +22,3 @@ def test_authorization_logout(browser):
     test_check_url = browser.current_url
     if test_check_url != 'http://192.168.31.84:8081/administration/index.php?route=common/login':
         raise ValueError(f'Тест находится на другой странице: {test_check_url}')
-
-
