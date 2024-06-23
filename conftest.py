@@ -4,8 +4,6 @@ from selenium.webdriver.firefox.options import Options as FFOptions
 from selenium.webdriver.chrome.options import Options
 
 
-# from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -40,8 +38,6 @@ def browser(request):
         raise ValueError(f'Browser {browser_name} not supported')
 
     driver.maximize_window()
-
-
 
     request.addfinalizer(driver.close)
 
